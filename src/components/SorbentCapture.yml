@@ -1,0 +1,68 @@
+context: |
+  A model for determining the physical specifications and user-handling requirements for a residential HVAC filter designed to capture CO₂.
+
+inputs:
+  - name: Filter Width
+    description: "The width of the filter's frontal face."
+    type: Numeric
+    values: [20, 24, 25]
+  - name: Filter Length
+    description: "The length of the filter's frontal face."
+    type: Numeric
+    values: [20, 24, 25]
+  - name: Filter Depth (L)
+    description: "The depth of the filter in the direction of airflow, in meters."
+    type: Numeric
+    values: [0.1, 0.12, 0.15]
+  - name: Airflow (Q)
+    description: "The volumetric flow rate of air through the HVAC system, in cubic meters per second."
+    type: Numeric
+    values: [0.47, 0.57, 0.66]
+  - name: Daily Runtime
+    description: "The average number of hours the HVAC system runs per day."
+    type: Numeric
+    values: [6, 8, 10]
+  - name: Maximum Static Pressure (ΔP)
+    description: "The maximum allowable pressure drop across the filter, in Pascals."
+    type: Numeric
+    values: [80, 100, 120]
+  - name: Sorbent Capture Efficiency (η)
+    description: "The fraction of CO₂ removed from the air that passes through the filter."
+    type: Percentage
+    values: [0.018, 0.022, 0.025]
+  - name: Sorbent Working Capacity (Cw)
+    description: "The mass of CO₂ the sorbent can capture per unit mass of sorbent (e.g., 0.1 is 10%)."
+    type: Percentage
+    values: [0.08, 0.1, 0.12]
+  - name: Initial CO₂ Concentration (Cin)
+    description: "The concentration of CO₂ in the incoming air, in kg/m³."
+    type: Numeric
+    values: [0.0007, 0.0008, 0.0009]
+  - name: Sorbent Mass Fraction
+    description: "The fraction of the total filter weight that is composed of sorbent material."
+    type: Percentage
+    values: [0.7, 0.75, 0.8]
+  - name: Max Cartridge Weight
+    description: "The maximum practical weight for a single, user-swappable filter cartridge, in kg."
+    type: Numeric
+    values: [10, 12.5, 15]
+
+computed_values:
+  - name: Frontal Area (A)
+    description: "The cross-sectional area available for airflow, calculated as (Filter Width * Filter Length)."
+  - name: Air Velocity (v)
+    description: "The speed of the air passing through the filter, calculated as (Airflow / Frontal Area)."
+  - name: Residence Time (τ)
+    description: "The duration the air spends within the filter, calculated as (Filter Depth / Air Velocity)."
+  - name: Hourly CO₂ Capture Rate (Y)
+    description: "The mass of CO₂ captured per hour of operation, calculated as ((Airflow * Initial CO₂ Concentration * Sorbent Capture Efficiency) * 3600)."
+  - name: Required Sorbent Mass
+    description: "The total mass of sorbent needed for one week of operation, calculated as ((Hourly CO₂ Capture Rate * Daily Runtime * 7) / Sorbent Working Capacity)."
+
+outputs:
+  - name: Total Weekly CO₂ Capture
+    description: "The total mass of CO₂ captured in a 7-day period, calculated as (Hourly CO₂ Capture Rate * Daily Runtime * 7)."
+  - name: Total Filter Weight
+    description: "The total weight of the filter system required for one week, calculated as (Required Sorbent Mass / Sorbent Mass Fraction)."
+  - name: Weekly Cartridge Swaps
+    description: "The number of modular cartridges a user must swap weekly, calculated as (Total Filter Weight / Max Cartridge Weight)."
