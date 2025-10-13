@@ -1,6 +1,32 @@
 ---
+// Import all components here
 import CarbonCalculator from '../components/CarbonCalculator.jsx';
 import SorbentCapture from '../components/SorbentCapture.jsx';
+
+// Component configuration - Add new components here!
+// Each component needs: category, id (unique), and label (display name)
+// Note: The id must match the data-component-id in the HTML below
+const componentConfig = [
+    // Capture Components
+    { category: 'Capture', id: 'sorbent-capture', label: 'Sorbent Capture' },
+    { category: 'Capture', id: 'carbon-calculator', label: 'Carbon Calculator' },
+    
+    // Distribution Components
+    // { category: 'Distribution', id: 'example-dist', label: 'Example Distribution' },
+    
+    // Processing Components
+    // { category: 'Processing', id: 'example-proc', label: 'Example Processing' },
+    
+    // Revenue Components
+    // { category: 'Revenue', id: 'example-rev', label: 'Example Revenue' },
+];
+
+// Group components by category
+const categories = ['Capture', 'Distribution', 'Processing', 'Revenue'];
+const groupedComponents = categories.map(cat => ({
+    name: cat,
+    components: componentConfig.filter(c => c.category === cat)
+})).filter(group => group.components.length > 0);
 ---
 
 <html lang="en">
@@ -12,10 +38,13 @@ import SorbentCapture from '../components/SorbentCapture.jsx';
         :root {
             --slate-100: #f1f5f9;
             --slate-200: #e2e8f0;
+            --slate-300: #cbd5e1;
             --slate-500: #64748b;
             --slate-700: #334155;
             --slate-800: #1e293b;
             --sky-500: #0ea5e9;
+            --sky-600: #0284c7;
+            --sky-100: #e0f2fe;
         }
         body {
             font-family: system-ui, sans-serif;
@@ -26,21 +55,89 @@ import SorbentCapture from '../components/SorbentCapture.jsx';
         }
         /* The main content area, initially hidden */
         main {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: auto;
             visibility: hidden; /* Hide content until password is entered */
         }
-        @media (min-width: 900px) {
-            main {
-                grid-template-columns: 450px 1fr;
-            }
-        }
-        h1 { font-size: 2.5rem; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
         p { color: var(--slate-500); margin-top: 0; }
-        .header { grid-column: 1 / -1; }
+        .header { margin-bottom: 2rem; }
+
+        /* Tab navigation styles */
+        .tab-navigation {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .category-group {
+            margin-bottom: 1.5rem;
+        }
+        .category-group:last-child {
+            margin-bottom: 0;
+        }
+        .category-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--slate-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .component-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .tab-button {
+            padding: 0.5rem 1rem;
+            background: var(--slate-100);
+            border: 1px solid var(--slate-300);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+            color: var(--slate-700);
+        }
+        .tab-button:hover {
+            background: var(--slate-200);
+            border-color: var(--slate-500);
+        }
+        .tab-button.active {
+            background: var(--sky-500);
+            border-color: var(--sky-600);
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Component container */
+        .component-container {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        .component-wrapper {
+            display: none;
+        }
+        .component-wrapper.active {
+            display: block;
+        }
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            color: var(--slate-500);
+            text-align: center;
+        }
+        .empty-state h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
 
         /* Styles for the password prompt overlay */
         #login-prompt {
@@ -71,8 +168,47 @@ import SorbentCapture from '../components/SorbentCapture.jsx';
             <p>An interactive calculator to model the carbon efficiency of a decentralized DAC transport network.</p>
         </div>
         
-        <CarbonCalculator client:load />
-        <SorbentCapture client:load />
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            {groupedComponents.map(group => (
+                <div class="category-group">
+                    <div class="category-title">{group.name}</div>
+                    <div class="component-tabs">
+                        {group.components.map(comp => (
+                            <button 
+                                class="tab-button" 
+                                data-component-id={comp.id}
+                                type="button"
+                            >
+                                {comp.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        <!-- Component Container -->
+        <div class="component-container">
+            <div id="empty-state" class="empty-state">
+                <h2>Welcome!</h2>
+                <p>Select a component from above to get started.</p>
+            </div>
+            
+            <!-- Add your components here with their corresponding data-component-id -->
+            <div class="component-wrapper" data-component-id="sorbent-capture">
+                <SorbentCapture client:only="react" />
+            </div>
+            <div class="component-wrapper" data-component-id="carbon-calculator">
+                <CarbonCalculator client:only="react" />
+            </div>
+            
+            <!-- When adding new components, add them here like:
+            <div class="component-wrapper" data-component-id="your-component-id">
+                <YourComponent client:only="react" />
+            </div>
+            -->
+        </div>
     </main>
 
     <script>
@@ -84,7 +220,7 @@ import SorbentCapture from '../components/SorbentCapture.jsx';
         const content = document.getElementById('content');
         const loginPrompt = document.getElementById('login-prompt');
         const loginForm = document.getElementById('login-form');
-        const passwordInput = document.getElementById('password-input');
+        const passwordInput = document.getElementById('password-input') as HTMLInputElement;
         const errorMessage = document.getElementById('error-message');
 
         function hexToBytes(hex) {
@@ -133,6 +269,53 @@ import SorbentCapture from '../components/SorbentCapture.jsx';
                 showContent();
             } else {
                 errorMessage.style.display = 'block';
+            }
+        });
+
+        // --- TAB NAVIGATION LOGIC ---
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const componentWrappers = document.querySelectorAll('.component-wrapper');
+        const emptyState = document.getElementById('empty-state');
+
+        function switchToComponent(componentId) {
+            // Remove active class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Hide all components
+            componentWrappers.forEach(wrapper => wrapper.classList.remove('active'));
+            
+            // Hide empty state
+            if (emptyState) emptyState.style.display = 'none';
+            
+            // Show selected component
+            const selectedWrapper = document.querySelector(`[data-component-id="${componentId}"].component-wrapper`);
+            if (selectedWrapper) {
+                selectedWrapper.classList.add('active');
+            }
+            
+            // Activate the clicked button
+            const selectedButton = document.querySelector(`[data-component-id="${componentId}"].tab-button`);
+            if (selectedButton) {
+                selectedButton.classList.add('active');
+            }
+            
+            // Save selection to sessionStorage
+            sessionStorage.setItem('activeComponent', componentId);
+        }
+
+        // Add click handlers to all tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const componentId = button.getAttribute('data-component-id');
+                switchToComponent(componentId);
+            });
+        });
+
+        // Restore previous selection or show empty state
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedComponent = sessionStorage.getItem('activeComponent');
+            if (savedComponent) {
+                switchToComponent(savedComponent);
             }
         });
     </script>

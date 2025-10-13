@@ -11,13 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.3.1",
+    "@astrojs/node": "^9.4.6",
+    "@astrojs/react": "^4.4.0",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "astro": "^4.8.2",
+    "astro": "^5.14.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "@astrojs/node": "^8.2.3"
+    "tslib": "^2.8.1"
   },
   "repository": {
     "type": "git",
