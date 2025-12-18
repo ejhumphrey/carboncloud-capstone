@@ -57,7 +57,7 @@
   Nathaniel Granor\textsuperscript{3},
   Eric J. Humphrey\textsuperscript{4},
   Jessica Maderos\textsuperscript{5}\\
-  \textsuperscript{1}\texttt{agarwalrishu31@gmail.com},
+  \textsuperscript{1}\texttt{arishu31@gmail.com},
   \textsuperscript{2}\texttt{maartenbosum@gmail.com},
   \textsuperscript{3}\texttt{nathaniel.granor@gmail.com},
   \textsuperscript{4}\texttt{humphrey.eric@gmail.com},
@@ -73,21 +73,21 @@
 
 
 \begin{abstract}
-Our considers a dual challenge: the urgent need for Gigaton-scale Carbon Dioxide Removal (CDR) and increasing economic pressure on households. This project investigated a solution to address both: a decentralized Direct Air Capture (DAC) network utilizing the existing HVAC infrastructure found in 75\% of American homes.
+This work explores addressing the dual challenge of gigaton-scale Carbon Dioxide Removal (CDR) and increasing economic pressure on homeowners as a complementary opportunity: a decentralized Direct Air Capture (DAC) network utilizing the existing HVAC infrastructure found in 75\% of American homes that incentivizes participation by creating passive income for homeowners.
 
-The core concept proposed a ``gig economy'' model for carbon: homeowners retrofit their forced-air systems with a smart filter containing a \ce{CO2}-selective sorbent. By leveraging airflow already paid for by the homeowner, we hypothesized this network could bypass the massive capital expenses and land-use requirements of centralized industrial DAC plants while providing passive income to families.
+Here we assess the techno-economic feasibility of distributed carbon capture network. 
+Homeowners retrofit their forced-air systems with a drop-in filter containing a \ce{CO2}-selective sorbent, and saturated filters are reclaimed to a centralized plant for the regeneration of \ce{CO2} gas via a managed delivery fleet.
+By leveraging airflow effectively subsidized by the homeowner, this network could bypass the massive capital expenses and land-use requirements of centralized industrial DAC plants while providing passive income to families.
 
-In anaylzing the concept, we determined the model requires a centralized plant for regeneration of \ce{CO2} gas from saturated sorbent, and thus also requires a logistics network to move sorbent between homes and the regeneration plant.
-
-Our research decomposed this model into four distinct lanes of feasibility:
+Our analysis decomposes this model into four distinct lanes of feasibility:
 \begin{itemize}
-    \item \textbf{Sorbent Viability:} The chemical capture mechanism is technically feasible. Research indicates Class IV Amine-based sorbents are currently the optimal choice for residential deployment, offering a capture capacity of $\approx 2.5$ mmol/g under standard indoor conditions. However, strictly residential constraints (e.g., the prohibition of toxic materials like \ce{NaOH}, a maximum comfortable lift weight of 10kg) limit the total capture volume per unit.
+    \item \textbf{Sorbent Viability:} The chemical capture mechanism is technically feasible. Research indicates Class IV Amine-based sorbents are currently the optimal choice for residential deployment, offering a capture capacity of $\approx 2.5$ mmol \ce{CO2}/grams of sorbent  under standard indoor conditions. However, strictly residential constraints (e.g., the prohibition of toxic materials like \ce{NaOH}, a maximum comfortable lift weight of 10kg) limit the total capture volume per unit.
     \item \textbf{Net-Carbon Logistics:} The ``last mile'' distribution of filters is net carbon-negative, even for diesel vehicles in dense geographies. The captured \ce{CO2} yield of this scheme is small ($9MMT$) compared to \emph{e.g.} passenger car emissions ($1000MMT$), but we find the total possible amount of \ce{CO2} in residential homes is much larger ($316MMT$).
-    \item \textbf{\ce{CO2} Regeneration:} While capturing the carbon is passive (using existing fans), releasing the carbon for sequestration or utilization requires the input of a significant quantity of external energy (thermal and/or electrical). Using a centralized regeneration facility, the energy cost is significant but still potentially workable. Powering the process with industrial waste heat or off-grid renewables could substantially improve both the financial and emissions cost. However, the construction of a centralized regeneration facility would defeat the original intent of avoiding the construction of a high CAPEX DAC plant.                
-    \item \textbf{Market Economics:} The original business model of paying homeowners for their carbon is not currently viable. With beverage-grade \ce{CO2} trading at maximum $\sim \$600\text{--}\$1000$/metric ton, the maximum yield per household is approximately \$5 per month. This amount is insufficient to incentivize behavior change or justify the ``gig economy'' narrative. Worse, the logistics network to transport saturated filters to a centralized regeneration facility costs more per pickup than the revenue generated by the carbon. 
+    \item \textbf{\ce{CO2} Regeneration:} While capturing the carbon is passive (using existing fans), releasing the carbon for sequestration or utilization requires the input of a significant quantity of external energy (thermal and/or electrical). Using a centralized regeneration facility, the energy cost is significant but still potentially workable. Powering the process with industrial waste heat or off-grid renewables could substantially improve both the financial and emissions cost. However, the construction of a centralized regeneration facility undermines the original intent of avoiding the construction of a significant capital expenditure DAC plant.                
+    \item \textbf{Market Economics:} The original business model of paying homeowners for their carbon is not currently viable. With beverage-grade \ce{CO2} trading at maximum $\sim \$600\text{--}\$1000$/metric ton, the maximum income per household is approximately \$5 per month. This amount is insufficient to incentivize behavior change or justify the ``gig economy'' narrative. Worse, the logistics network to transport saturated filters to a centralized regeneration facility costs more per pickup than the revenue generated by the carbon. 
 \end{itemize}
 
- Based on these findings, an ``AirBnB for Carbon'' income model is not currently supported by market prices for \ce{CO2} and due to the high costs associated with deploying \ce{CO2} transportation and logistics for such a decentralized capture network. However, the infrastructure advantage remains valid. For this venture to proceed \textit{today}, we would recommend a strategic pivot from an income-generation model to a consumer-product model. Rather than paying homeowners, the system would be marketed as a premium ``Ultra-Pure Air'' service (e.g., \$100/year subscription) that removes indoor pollutants while passively capturing carbon dioxide.
+ Based on these findings, an ``AirBnB for Carbon'' income model is not currently supported by market prices for \ce{CO2} and due to the high costs associated with deploying \ce{CO2} transportation and logistics for such a decentralized capture network. However, the infrastructure advantage remains valid. For this venture to proceed \textit{today}, we would recommend a strategic pivot from an income-generation model to a consumer-product model. Rather than paying homeowners, the system would be marketed as a premium ``ultra-pure air'' service (e.g., \$100/year subscription) that removes indoor pollutants while passively capturing carbon dioxide.
 \end{abstract}
 
 \section{Introduction}
@@ -121,15 +121,15 @@ In working through the concept, we designed a solution involving 4 operational s
 \end{enumerate}
 
 \subsection{Scope of Analysis}
-This white paper investigates the feasibility of a residential, distributed DAC network. Our research aims to answer the critical questions: Can we harness existing residential airflow for carbon capture? Is the lifecycle carbon negative? And finally, who pays for the captured carbon?
+This white paper investigates the techno-economic feasibility of a residential, distributed DAC network. Our research aims to answer three critical questions: Can we harness existing residential airflow for carbon capture? Is the lifecycle carbon negative? And finally, who pays for the captured carbon?
 
 The remainder of this paper details these findings as follows:
 \begin{itemize}
     \item Section 2 presents the basic details of carbon capture technology with examples of commercial projects in a range of formats.
     \item Section 3 provides a technical review of the state-of-the-art in sorbent technology, specifically analyzing Class IV Amine-based sorbents suitable for safe, residential use.
-    \item Section 4 models the logistics of a decentralized ``last-mile'' system, analyzing the emissions caused by distributing and reclaiming filters versus the carbon captured.
+    \item Section 4 models the logistics of a decentralized ``last-mile'' system, analyzing the emissions caused by distributing and reclaiming filters versus the carbon captured, the theoretical limit of capturable \ce{CO2} in residential homes, and a best-case capture yield of this scheme.
     \item Section 5 examines regeneration methods, outlining the energy requirements (OpEx) and complexity (CapEx) that currently threaten the viability of the model.
-    \item Section 6 discusses the economics of this venture, analyzing markets for captured carbon dioxide, the revenue potential of selling food and beverage grade \ce{CO2} versus carbon credits and other potential commodities, and considering the costs of operation.
+    \item Section 6 discusses the economics of this venture, analyzing markets for captured carbon dioxide, the revenue potential of selling \ce{CO2} versus carbon credits and other potential commodities, and considering the costs of operation.
     \item Section 7 summarizes our findings and outlines the technological and economic developments required to make decentralized residential DAC a reality.
 \end{itemize}
 
@@ -146,7 +146,7 @@ Scientists and engineers have researched a range of technologies and processes f
 \subsubsection{Emissions Reduction vs. Carbon Removal}
 Though the technologies involved may be similar or even identical, there is an important difference between capturing \ce{CO2} from the atmosphere (carbon removal) versus capturing \ce{CO2} from an exhaust stream before it enters the atmosphere (emissions reduction). Point-source capture projects are always examples of emissions reduction, whereas DAC projects generally represent carbon removal.
 
-The concentration of greenhouse gases (GHGs) in the atmosphere drives climate change. The most widespread GHG is carbon dioxide. According to the Intergovernmental Panel on Climate Change, the average global temperature will stop rising when we stop increasing the concentration of GHGs in the atmosphere, i.e. when we reach "net-zero" emissions. Net-zero can be achieved by a combination of eliminating human-caused GHG emissions (for example, by replacing fossil fuels with renewable energy sources) and offsetting any remaining emissions with new carbon removals. 
+The concentration of greenhouse gases (GHGs) in the atmosphere drives climate change. The most widespread GHG is carbon dioxide. According to the Intergovernmental Panel on Climate Change, the average global temperature will stop rising when we stop increasing the concentration of GHGs in the atmosphere, i.e. when we reach "net-zero" emissions. Net-zero can be achieved by a combination of eliminating human-caused GHG emissions (e.g., by replacing fossil fuels with renewable energy sources) and offsetting any remaining emissions with new carbon removals. 
 
 While carbon capture for emissions reduction is geared towards abating carbon emissions, it is never 100\% effective, meaning that any project with carbon capture for emissions \textit{reduction} is still ultimately a source of carbon emissions that need to be halted entirely or offset by carbon \textit{removals}. Permanent emissions reductions remain an absolutely critical part of the global response to climate change, particularly in the short to medium term, while carbon removals will be necessary in the long term to reach net-zero and eventually net-negative carbon emissions.
 
@@ -155,7 +155,7 @@ Point-Source carbon capture systems have been in operation at industrial scale s
 
 The Shute Creek Carbon Capture, Utilization and Storage (CCUS) site operated by Exxon-Mobile in Wyoming, US, serves as an early example of industrial-scale point-source capture. Oil and gas companies developed CCUS not as an emission-reductions process, but as a way to extract additional revenue from their methane value chain by selling captured \ce{CO2} back to oil companies, who use it as part of an enhanced technique to pump hard-to-extract oil from otherwise-depleted wells. While the pumped \ce{CO2} remains underground, the recovered oil - once burned for fuel - releases additional \ce{CO2} that negates the carbon capture benefits. 
 
-According to a 2022 report from the Institute for Energy Economics and Financial Analysis \cite{ieefa2022}, Shute Creek has produced approximately 240 million metric tons (MMT) of \ce{CO2} over its lifetime. Of that total, the facility vented approximately half into the atmosphere. A further $\approx 47\%$ of that CO2 was sold to oil companies for enhanced oil recovery, leaving only $\approx 3\%$ (or 6MMT) that has been sequestered and prevented from reaching the atmosphere.
+According to a 2022 report from the Institute for Energy Economics and Financial Analysis \cite{ieefa2022}, Shute Creek has produced approximately 240 million metric tons (MMT) of \ce{CO2} over its lifetime. Of that total, the facility vented approximately half into the atmosphere. A further $\approx 47\%$ of that \ce{CO2} was sold to oil companies for enhanced oil recovery, leaving only $\approx 3\%$ (or 6MMT) that has been sequestered and prevented from reaching the atmosphere.
 
 The Illinois Industrial Carbon Capture and Storage Project in Decatur, Illinois opened in 2011 - one of a small number of point-source capture facilities in the U.S. whose primary purpose is to permanently sequester captured \ce{CO2}. The capture system feeds off of a corn ethanol production facility run by Archer Daniels Midland (ADM), which means that rather than use a chemical process to adsorb \ce{CO2} in a sorbent or solvent, this project releases \ce{CO2} as the output of a biological fermentation process, capturing 10--12\% of that plant’s annual \ce{CO2} emissions totalling $\approx4$ MMT per year. The project has received hundreds of millions of dollars of U.S. government subsidies. Environmental advocates, such as the Environmental Integrity Project\cite{eip2024adm}, criticize the project for its relatively high expense and low efficiency as an emissions-reduction project.
 
@@ -241,18 +241,24 @@ The current Direct Air Capture (DAC) landscape is characterized by two main arch
 \begin{enumerate}
     \item \textbf{Solid Sorbent:} This architecture employs porous filters that are often functionalized with an active chemisorption agent such as amines. Atmospheric air is drawn through the filter, where \ce{CO2} chemically binds to the sorbent's surface.
     
-    \item \textbf{Liquid Solvent:} This method moves air through a chemical solution such as potassium hydroxide (\ce{KOH}, also known as caustic potash) in an "air contactor" (like a cooling tower) where CO2 is absorbed into the solution oftentimes as a carbonate salt. 
+    \item \textbf{Liquid Solvent:} This method moves air through a chemical solution such as potassium hydroxide (\ce{KOH}, also known as caustic potash) in an "air contactor" (like a cooling tower) where \ce{CO2} is absorbed into the solution oftentimes as a carbonate salt. 
 \end{enumerate}
 
-\textbf{Residential DAC} would be an innovative hybrid approach. It adopts the core solid sorbent technology typical of large-scale DAC but decentralizes the capture units. This distribution is specifically designed to capitalize on the distinct atmospheric and environmental conditions found within the built environment.
-The residential setting offers a unique thermodynamic advantage:   
+The choice of sorbent material is a critical component of a residential DAC system. 
+Unlike industrial settings where liquid solvents like caustic potash (\ce{KOH}) are acceptable, the residential context demands materials that are non-toxic, solid-state, and capable of operating at ambient temperatures and varying humidity levels.
+
+Furthermore, residential DAC presents a somewhat novel enviroment for sorbent-based capture.
+In-home atmospheric conditions are distinct compared with other environments where sorbents are typically deployed, such as open air or exhaust flues.
+The residential setting offers a unique combination of thermodynamic advantages:   
 \begin{itemize}
-    \item \textbf{\ce{CO2} Enrichment:} Human respiration elevates indoor \ce{CO2}  levels significantly above ambient. In an occupied bedroom or living room, levels frequently reach approximately around 800 ppm \cite{yuan2023indoor}.
+    \item \textbf{\ce{CO2} Enrichment:} Human respiration elevates indoor \ce{CO2} levels significantly above ambient atmospheric conditions. In an occupied bedroom or living room, levels frequently reach approximately around 800 ppm \cite{yuan2023indoor}.
 
     \item \textbf{Isotherm Implications:} Operating at 800 ppm rather than 400 ppm effectively doubles the partial pressure driving force. For many sorbents, this can increase the working capacity by 30-50 percent compared to an outdoor unit. A residential DAC system effectively "feeds" on the occupants' exhalations, turning the home into a pre-concentrator and improving the overall system efficiency.
 
+    \item \textbf{Predictable Conditions:} The in-home temperature is ideally held roughly stable throughout the year, regardless of temperate zone (20-22$^\circ$C). Relative humidity in summer typically sits at 50\% RH, while this may drop to 25 \% in climates with colder winters. This predictability can be leveraged when identifying a sorbent well-suited to this use case.
+
 \end{itemize}
-The critical component of the Residential DAC system is the sorbent material. Unlike industrial settings where liquid solvents like caustic potash (\ce{KOH}) are acceptable, the residential context demands materials that are non-toxic, solid-state, and capable of operating at ambient temperatures and varying humidity levels.
+
 
 \subsection{Properties of Sorbents}
 Selecting the best sorbent is a multi-faceted optimization challenge. The following properties\cite{panda2023evaluation} need to be considered while selecting the sorbent for a specific application -- residential DAC in the present case:
@@ -375,7 +381,7 @@ To evaluate the viability of a distributed Direct Air Capture (DAC) network, we 
 
 \subsubsection{Sorbent and Cartridge Constraints} 
 Based on our material analysis above, we assume a nominal sorbent capacity ($Q_e$) of 2.5 mmol/g given previously published findings. 
-We would note that given the higher concentrations of \ce{CO2} in indoor settings, it is possible that this sorbent capacity might be higher in practice.
+Note that, as discussed previously, Class IV sorbent capacity may prove higher in practice given the higher concentrations of \ce{CO2} in indoor settings.
 To maximize the ``carbon return'' per trip, the cartridge is designed to hold the maximum amount of active sorbent manageable by a single person in a residential setting. 
 Based on similarly sized consumer products, such as dry dog food or water softener salt, we anticipate homeowners can manage weights in the range of 10-20kg. 
 We thus model a cartridge with 9 kg of active sorbent and a 1 kg housing structure. 
@@ -401,7 +407,7 @@ With a 5\% inefficiency, we use $9.7mpg$ as the diesel truck fuel economy.
 We base our electric vehicle on the Rivian EDV 700, popularized by Amazon.
 The current standard production Rivian EDV 700 uses a 100 kWh Lithium Iron Phosphate (LFP) battery pack\footnote{\url{https://www.greencarreports.com/news/1145719_rivian-opens-electric-van-sales-to-all-fleets}}, with an EPA estimated range of 153 miles ($1.53 mi/kWh$).
 With a similar inefficiency tax of 5\%, we use $1.45mi/kWh$ as the electric van fuel economy.
-The emissions due to charging are based on the US average grid intensity ($0.386 kg \ce{CO2}/kWh$)\footnote{https://news.mit.edu/2024/cutting-carbon-emissions-us-power-grid-0311}.
+The emissions due to charging are based on the US average grid intensity ($0.386 kg~\ce{CO2}/kWh$)\footnote{https://news.mit.edu/2024/cutting-carbon-emissions-us-power-grid-0311}.
 Note that this variable approaches zero for fleets powered by on-site solar, representing a significant future efficiency upside.
 
 We can then relate the carbon footprint between these two vehicles in terms of kilograms of \ce{CO2} emitted per mile.
@@ -420,7 +426,7 @@ There are several variables that constrain the number of cartridges that can be 
 \end{itemize}
 
 We find that in dense urban areas, delivery drivers are able to make 20-30 stops an hour \cite{wef2020lastmile}.
-For our purposes here, we linearly scale this value as a rough estimate (24, 16, and 8 stops in the urban, suburban, and rural conditions respectively).
+For our purposes here, we linearly scale this value as a rough estimate (24, 16, and 8 stops) across the urban, suburban, and rural conditions, respectively.
 As we are moving heavy items, we must also mind the amount of total manual labor performed during the shift. 
 By applying the guidelines provided by NIOSH, we anticipate a driver can safely manage a maximum of 140 cartridges in a given shift\cite{waters1994niosh}. 
 We keep with a single driver for now, acknowledging that a second operator in vehicle would double the personnel costs. 
@@ -514,7 +520,7 @@ Substituting these values yields the hourly addressable mass flux per household:
     \dot{m}_{avail} = 412 \cdot 0.5 \cdot (0.001 - 0.00028) \cdot 1.84 \approx 0.273 \, kg/h
 \end{equation}
 
-Extrapolating this flux over one year ($8,760$ hours) for the total count of U.S. households ($132.2$ million) \cite{fred2024households}, we estimate the total addressable residential \ce{CO2} potential in Table \ref{tab:co2_estimates}.
+Extrapolating this flux over one year ($8,760$ hours) for the total count of U.S. households ($132.2$ million) \cite{fred2024households}, we estimate the total addressable residential \ce{CO2} potential to be $316MMT, shown in Table \ref{tab:co2_estimates}.
 
 \begin{table}[h]
     \centering
@@ -583,7 +589,7 @@ We see two possible avenues for unlocking higher \ce{CO2} yield.
 A modest and straightforward approach is the continued advance of sorbent capacity by weight. 
 Continued research and development of class IV solid amines sorbents, MOFs, or the eventual discovery of others classes and methods could hold more \ce{CO2} per unit mass. 
 
-However, on some level, the sorbent or other capture substrate will always represent a dead-weight tax on logistics. We argue, the sustainable long-term path is probably in-home regeneration capable of ``charging'' concentrated cannisters that can have small modular footprints, like a SodaStream or whipped cream charger. 
+However, on some level, the sorbent or other capture substrate will always represent a dead-weight tax on logistics. We argue that the sustainable long-term path is likely via in-home regeneration capable of ``charging'' concentrated cannisters that can have small modular footprints, like consumer beverage carbonators (e.g. SodaStream) or whipped cream chargers. 
 
 There are many advantages to this approach in a distributed residential setting. The filter, once installed, does not need to move until it reaches the end of its service life, which relaxes the limitations on its size and complexity. Concentrated \ce{CO2}, or perhaps even pure carbon, is lighter and smaller when decoupled from the filter assembly, which eases the burden on reclamation (in terms of both weight and cubic volume) \emph{and} the homeowner. A filter could potentially be made to be self-servicing, and could regenerate several cartridges in-place before requiring human intervention. 
 
@@ -601,7 +607,7 @@ We examined two potential cases for regenerating the captured \ce{CO2} from the 
     Requires additional hardware installation in the home system to apply the necessary heat and electricity for the regeneration process, as well as process equipment for purifying the \ce{CO2} stream and compressing it into on-site storage. The process would also feed off the homeowner's electricity supply.
     \item \textbf{Transporting the saturated filters to a centralized regeneration facility}:
     
-    Requires a dedicated transportation and logistics network, as well CAPEX to build the facility, and OPEX to run the process at industrial scale. Depending on location, there is a potential opportunity to reduce the energy input requirement  by co-locating the facility with a source of waste heat such as from a data center, nuclear or geothermal plant, or another high temperature industrial process such as steel milling.
+    Requires a dedicated transportation and logistics network, as well CapEx to build the facility, and OpEx to run the process at industrial scale. Depending on location, there is a potential opportunity to reduce the energy input requirement  by co-locating the facility with a source of waste heat such as from a data center, nuclear or geothermal plant, or another high temperature industrial process such as steel milling.
 \end{enumerate}
 
 Separately, we considered the possibility of not performing regeneration at all, but rather allowing the \ce{CO2} to be converted to limestone (\ce{CaCO3}). While a calcium-based sorbent was not selected for our analysis, the commodity market and potential profit of a non-regenerated limestone product is examined in the upcoming $Economics$ section. 
@@ -612,7 +618,7 @@ Methods for regenerating \ce{CO2} from sorbents that have reached maturity inclu
 \begin{itemize}
     \item \textbf{Thermal-Vacuum-Swing Adsorption (TVSA):} Involves heating the saturated sorbent at minimum 80--100$^\circ$C to release physisorbed and chemisorbed \ce{CO2}. Vacuum is added to enhance the purity of the offgased stream. Has reached pilot and commercial scale, for example with the company Climeworks. \cite{AN2023102587}
 
-    \item \textbf{Calcination:} Involves decomposition under high temperaturs (up to 950$^\circ$C) of solid calcium carbonate (\ce{CaCO3}) into \ce{CaO} and \ce{CO2}. Has reached pilot and commerical scale, for example with the companies Carbon Engineering, 1PointFive, and Heirloom.
+    \item \textbf{Calcination:} Involves decomposition under high temperatures (up to 950$^\circ$C) of solid calcium carbonate (\ce{CaCO3}) into \ce{CaO} and \ce{CO2}. Has reached pilot and commerical scale, for example with the companies Carbon Engineering, 1PointFive, and Heirloom.
     
     \item \textbf{Pressure/Vacuum Swing (PSA/VPSA):} \ce{CO2} is 
     absorbed under high pressure by the sorbent. For regeneration, the pressure is reduced to atmospheric level (or below) with vacuum often being used to release the \ce{CO2} in a highly pure stream.
@@ -624,7 +630,7 @@ Methods for regenerating \ce{CO2} from sorbents that have reached maturity inclu
 \end{itemize}
 
 \subsection{Analysis of available regeneration techniques}
-For our use-case of low pressure drop in-home HVAC system filters capturing \ce{CO2}, a solid sorbent such as an amine composite material would typically be regenerated using the thermal-swing adsorption method. Breaking the chemical bonds associated with the chemisorbed \ce{CO2} within the amine group requires heat to reach an activation temperature upon which the original chemical reaction is reversed, releasing \ce{CO2} into a pure stream. 
+For our use-case of low static pressure (120Pa), in-home HVAC system filters capturing \ce{CO2}, a solid sorbent such as an amine composite material would typically be regenerated using the thermal-swing adsorption method. Breaking the chemical bonds associated with the chemisorbed \ce{CO2} within the amine group requires heat to reach an activation temperature upon which the original chemical reaction is reversed, releasing \ce{CO2} into a pure stream. 
 
 TVSA is already proven at scale and does not require additional expensive purge gases such as nitrogen. With our selected sorbent medium, TVSA can also be performed at relatively low temperatures of 80--100$^\circ$C \cite{AN2023102587} which opens the possibility of performing TVSA at a central plant or in-home.
 
@@ -638,14 +644,14 @@ An electrochemical separation process would work in theory, however the liquid s
 
 \subsection{Exploration of costs of processes for selected sorbents}
 
-There is a direct relationship between the financial cost to regenerate a sorbent and the energy input required. To analyze the net carbon negativity of the regeneration process, the metric of regeneration efficiency in kilowatt hours (kWh) per metric ton (mTonne) is examined.
+There is a direct relationship between the financial cost to regenerate a sorbent and the energy input required. To analyze the net carbon negativity of the regeneration process, the metric of regeneration efficiency in kilowatt hours (kWh) per metric ton (MT) is examined.
 
 There are several distinct energy costs involved in a TVSA regeneration process. First, there is the active thermal energy component, directly linked to releasing the stored \ce{CO2}. The electrical energy required to run the equipment associated with the process (including motors in pumps, compressors, and fans) generate additional costs. In the case of regeneration performed in a central facility, one must also account for the operational energy consumption for the entire facility (lighting, HVAC, IT, etc.). 
 
-While the electrical energy requirement to power the \textit{adsorption} process has been widely documented by various organizations, our in-home DAC system would theoretically have a 0 kWh/mTonne contribution due to the utilization of an already-present HVAC blower fan. On the other hand, the available literature on electrical energy requirements for regeneration is thin, with values heavily dependent on the scale of regeneration facility (a large central facility has the best efficiency). Regardless, \textit{thermal} energy dominates the costs in our application. Therefore, this analysis focuses on thermal energy costs alone.
+While the electrical energy requirement to power the \textit{adsorption} process has been widely documented by various organizations, our in-home DAC system would theoretically have a 0 kWh/MT contribution due to the utilization of an already-present HVAC blower fan. On the other hand, the available literature on electrical energy requirements for regeneration is thin, with values heavily dependent on the scale of regeneration facility (a large central facility has the best efficiency). Regardless, \textit{thermal} energy dominates the costs in our application. Therefore, this analysis focuses on thermal energy costs alone.
 
-According to published analyses, thermal energy consumption for chemisorbent based systems have been evaluated between 1170 and 2000 kWh/mTonne\cite{Leonzio_Fennell_Shah_2022}. 
-With grid electricity rates in the US in late 2025 ranging between \$0.07 and \$0.42 per kWh depending on location, time of use, and residential vs commercial rates\cite{gridrates_2025}, we can calculate a best-case regeneration cost of \textbf{\$81.9/mTonne}. 
+According to published analyses, thermal energy consumption for chemisorbent based systems have been evaluated between 1170 and 2000 kWh/MT\cite{Leonzio_Fennell_Shah_2022}. 
+With grid electricity rates in the US in late 2025 ranging between \$0.07 and \$0.42 per kWh depending on location, time of use, and residential vs commercial rates\cite{gridrates_2025}, we can calculate a best-case regeneration cost of \textbf{\$81.9/MT}. 
 In the case of our in-home filter with 9 kg of active sorbent material and a Qe of 2.5 mmol/g, which yields approximately 1 kg of \ce{CO2}, this amounts to \textbf{1.2 kWh and \$0.084-0.50 per filter regeneration cycle}. 
 In the following $Markets$ section, we will compare this to the value of the regenerated \ce{CO2} depending on various commodity markets.  
 
@@ -654,18 +660,19 @@ In the following $Markets$ section, we will compare this to the value of the reg
 
 Regeneration is energy-intensive due to the thermodynamic requirements for releasing the stored \ce{CO2} back into a gas from the filter. In addition, the logistics of regenerating the saturated filters is non-trivial, requiring either additional hardware and energy input to perform recovery in the home and store pressurized \ce{CO2} on-site, or a logistics network to implement transportion of saturated filters to a centralized regeneration facility. 
 
-In the case of in-home regeneration, the additional energy burden on the homeowner, onsite storage of \ce{CO2} requirement, high heat and potentially caustic chemicals present present serious challenges. Meanwhile, a centralized regeneration facility poses a significant CAPEX burden that threatens to undermine the original intent of distributing the DAC process. Furthermore, the costs to operate the saturated filter transportation network would be a significant additional contribution to the total overhead. For these reasons, the regeneration process poses significant challenges to the viability of our proposed approach.
+In the case of in-home regeneration, the additional energy burden on the homeowner, onsite storage of \ce{CO2} requirement, high heat and potentially caustic chemicals present various challenges. Meanwhile, a centralized regeneration facility poses a significant CapEx burden that potentially undermines the original intent of distributing the DAC process. Furthermore, the costs to operate the saturated filter transportation network would be a significant additional contribution to the total overhead. For these reasons, the regeneration process poses significant challenges to the viability of our proposed approach.
 
 \section{Economics}
 \subsection{Revenue and Markets}
-The business case for pursuing a decentralized carbon capture network relies on the value of captured \ce{CO2}. We primarily investigated the revenue potential of selling purified \ce{CO2} as a commodity (i.e. food and beverage grade) at a bulk wholesale price in \$/ton. Alternatively, we considered the possibility of performing permanent sequestration of the captured \ce{CO2} and relying on the tax credit market within the US for revenue. Lastly, in the case where regeneration was not performed, we considered the possibilit of selling non-regenerated limestone. 
+The business case for pursuing a decentralized carbon capture network relies on the value of captured \ce{CO2}. We primarily investigated the revenue potential of selling purified \ce{CO2} as a commodity (i.e. food and beverage grade) at a bulk wholesale price in \$/ton. Alternatively, we considered the possibility of performing permanent sequestration of the captured \ce{CO2} and relying on the tax credit market within the US for revenue. Lastly, in the case where regeneration was not performed, we considered the possibility of selling non-regenerated limestone. 
 
-The following table illustrates the potential revenue in dollars per metric ton for each source.
+Table \ref{tab:product_value} illustrates the potential revenue in dollars per metric ton for each source.
 
 
 \begin{table}[h]
 \centering
 \caption{Comparative Product Value Matrix}
+\label{tab:product_value}
 \footnotesize
 \begin{tabularx}{\textwidth}{@{}l X X@{}}
 \toprule
@@ -684,65 +691,69 @@ The following table illustrates the potential revenue in dollars per metric ton 
 
 In this analysis we find that selling food and beverage grade \ce{CO2} to be the most valuable. Carbon capture companies, such as Remora Carbon, have begun to emerge selling captured \ce{CO2} on this market, as a form of an early beachhead to bootstrap their business.
 
-Using the assumptions from the preceding sections, a single saturated filter produces 1 kg \ce{CO2} that yields \textdollar $0.60-1$ in gross value based on the commodity pricing for food and beverage grade \ce{CO2}\cite{olivon25}. We assume that homeowners might be willing to particiapte in a filter swap between once per month and once per week. Given the commodity value, this would yield a maximum gross revenue of:
+Using the assumptions from the preceding sections, a single saturated filter produces 1 kg \ce{CO2} that yields \textdollar $0.60-1.00$ in gross value based on the commodity pricing for food and beverage grade \ce{CO2}\cite{olivon25}. We assume that homeowners might be willing to particiapte in a filter swap between once per month and once per week. Given the commodity value, this would yield a maximum gross revenue of:
 \begin{itemize}
     \item \textbf{at a frequency of once per month: }$\leq \$1$ per month
     \item \textbf{at a frequency of once per two weeks: }$\leq \$2.17$ per month
     \item \textbf{at a frequency of once per week: }$\leq \$5.20$ per month
 \end{itemize}
 
-Even if the homeowner collected the full revenue each month (with no revenue used to cover costs or generate profit), it is hard to imagine this amount would suffice to incentivize a homeowner to sign up, let alone to lug an 11kg filter to the street and back each cycle.
+Even if the homeowner collected the full revenue each month (with no revenue used to cover costs or generate profit), it is hard to imagine this amount would suffice to incentivize a homeowner to sign up, let alone service heavy filters on a frequent basis.
 
 \subsection{Costs}
 A careful analysis of costs is \textit{not} the focus of this paper. Still, a coarse model of factors contributing to costs would look something like this:
 
 \vspace{1em}
-\textbf{Capital Expenses (CAPEX)}
+\textbf{Capital Expenses (CapEx)}
 \begin{itemize}
     \item Construction of a regeneration facility
     \item Purchase of vehicles for distribution fleet
 \end{itemize}
 
-\textbf{Operational Expenses (OPEX)}
+\textbf{Operational Expenses (OpEx)}
 \begin{itemize}
     \item HVAC refit per customer (materials and labor) amortized over total number of cartridges in system lifetime
     \item New cartridge cost amortized over cartridge cycle life
     \item Logistics cost per cartridge replacement
     \item Regeneration energy cost per cartridge cycle (\$0.10 as calculated in Section 5)
-    \item Additional purification of the regenerated \ce{CO2}. Would most likely be required for food and beverage grade \ce{CO2}. 
+    \item Additional purification of the regenerated \ce{CO2} (likely required for food and beverage grade \ce{CO2}) 
 \end{itemize}
 
-Unfortunately, we needn't examine these costs deeply to determine that the costs are not borne by the minimal unit revenue calculated above. A very brief analysis of the logistics cost per replacement trip alone guarantees unprofitability in the U.S. market:
+Unfortunately, we needn't examine these costs deeply to determine that the costs are not borne by the minimal unit revenue calculated above. A brief analysis of the logistics cost per replacement trip alone guarantees operating losses in the U.S. market:
 
 \begin{itemize}
     \item Driver salary likely dominates logistics costs.
     \item The logistics model in Section 4 assumes a driver makes between 8 and 24 stops per hour 
-    \item Assume a driver is paid \$20 per hour (it is likely higher), then each delivery/swap costs between \$0.83 and \$2.50. 
+    \item Assume a driver is paid \$20 per hour (in reality, likely higher), then each delivery/swap costs between \$0.83 and \$2.50. 
 \end{itemize}
 
-So the delivery driver cost alone costs 1--2x the total potential revenue of the \ce{CO2} captured by a cartridge. It is therefore clear that the proposed business model operates at a loss.
+The delivery driver cost alone costs 1--2x the total potential revenue of the \ce{CO2} captured by a cartridge. 
+To simplify math, if we take the value as \$2.00 per filter, this is equivalent to \$2000 / MT \ce{CO2}, far from the \$100 / MT target. 
+This sufficiently shows operating losses in the business model, and all other OpEx only drives losses deeper.
 
 In the face of the unfavorable economic potential of this venture, we considered a few other potential alternatives to the existing business model:
 
 \begin{itemize}
-    \item \ce{H2O} : in the case of amine based sorbents, \ce{H2O} would also be captured alongside the \ce{CO2} in a ratio depending on the selectivity of the sorbent material, and could thus be regenerated and potentially sold as a commodity along with the \ce{CO2}. In applications such as data centers, industrial grade cooling water would potentially be a very attractive secondary market for our application, specifically in the case of the centralized regeneration facility. While the pricing, markets, and logistics for capturing and distributing \ce{H2O} were not a focus of this study, we recommend examining this further in future analyses on direct air capture
+    \item \textbf{Captured \ce{H2O}}: in the case of amine based sorbents, \ce{H2O} would also be captured alongside the \ce{CO2} in a ratio depending on the selectivity of the sorbent material, and could thus be regenerated and potentially sold as a commodity along with the \ce{CO2}. In applications such as data centers, industrial grade cooling water would potentially be a very attractive secondary market for our application, specifically in the case of the centralized regeneration facility. While the pricing, markets, and logistics for capturing and distributing \ce{H2O} were not a focus of this study, we recommend examining this further in future analyses on direct air capture
 
-    \item Shifting away from a commodity market and paying the user to charging the user for a service, \emph{i.e.} in-home air purifier with \ce{CO2} capture as a co-benefit. This would be in line with the product Atalanta Climate has already released, and therefore would have first mover advantage.
+    \item \textbf{Secondary products}: Converting the regenerated \ce{CO2} to a more valuable secondary product. While a detailed analysis of the costs of doing this was not the focus of this study, \ce{CO2} conversion to products such as jet fuel and carbon fiber is already being targeted by companies such as Twelve and Airco. 
+
+    \item \textbf{Air Filter as a Service}: Shifting away from a commodity market and paying the user to charging the user for a service, i.e. in-home air purifier with \ce{CO2} capture as a co-benefit. This would be in line with the product Atalanta Climate has already released, and therefore would have first mover advantage.
 \end{itemize}
 
 
 \section{Conclusions}
 
-This feasibility study aimed to investigate a provocative hypothesis: that the existing HVAC infrastructure found in 75\% of American homes could be deputized as a decentralized, gig-scale Direct Air Capture (DAC) network. Our research decomposed this model into three distinct vectors of feasibility: the thermodynamic reality of sorbent behavior in residential environments, the net-carbon impact of a distributed logistics network, and the economic viability of a ``gig economy'' payout model for homeowners.
+This feasibility study aimed to investigate a provocative hypothesis: that the existing HVAC infrastructure found in 75\% of American homes could be deputized as a decentralized, gigaton-scale Direct Air Capture (DAC) network. Our research decomposed this model into three distinct vectors of feasibility: the thermodynamic reality of sorbent behavior in residential environments, the net-carbon impact of a distributed logistics network, and the economic viability of a ``gig economy'' payout model for homeowners.
 
-The synthesis of these models leads us to a nuanced conclusion. While the physics of residential capture are sound and the logistics are surprisingly carbon-negative, the economic engine required to drive a manual-swap network is currently broken. The following sections detail these findings and propose a strategic pivot for the technology to remain viable.
+The synthesis of these models leads us to a nuanced conclusion. While the physics of residential capture are sound and the logistics are surprisingly carbon-negative, the economic engine required to drive a manual-swap network is inadequate. The following sections detail these findings and propose a strategic pivot for the technology to remain viable.
 
 \subsection{Summary of Findings}
 
 \subsubsection{Carbon Negativity}
 Perhaps the most counter-intuitive finding of this study is that the "last mile" distribution network appears to be net carbon negative. We initially hypothesized that the emissions generated by diesel delivery vehicles would negate the relatively small mass of \ce{CO2} captured per trip. However, our models indicate that even with conventional fossil-fuel logistics, the system returns a positive carbon yield. We also note that the energy intensity of regeneration, at least when performed in a centralized facility, is likely manageable in this scheme, especially if the facility can be co-located with renewable energy sources or industrial waste heat to minimize emissions.
 
-However, this conclusion carries a significant caveat: our model did not account for the lifecycle emissions associated with filter manufacturing or global supply chain logistics. While the \textit{operation} of the network is negative, the \textit{production} of millions of disposable or semi-disposable sorbent cartridges represents a large unknown variable. If these complex chemical units are manufactured outside of the U.S. and require trans-oceanic shipping, the margins of net-negativity we observed in the logistics phase could easily be erased.
+However, this conclusion carries a significant caveat: our model did not account for the lifecycle emissions associated with filter manufacturing or global supply chain logistics. While the \textit{operation} of the network is negative, the \textit{production} of millions of disposable or semi-disposable sorbent cartridges represents a large unknown variable. If these complex chemical units are manufactured outside of the U.S. and require trans-oceanic shipping, the margins of net-negativity we observed in the logistics phase could be erased.
 
 \subsubsection{Headwinds for a ``Gig Economy'' Model}
 It is a central economic premise of this project that homeowners could be incentivized to participate in a decentralized carbon capture scheme by earning passive income.
@@ -750,7 +761,9 @@ Putting the data together, there is not enough revenue generated to motivate hom
 With food and  beverage grade \ce{CO2} trading at a maximum of \$1000/ton, the maximum theoretical revenue for a household is approximately \$5-7 per month. 
 Even under the most optimistic scenarios, a homeowner would earn less than \$100 annually.
 
-This creates a critical gap in the business model. To induce behavioral change and consistent participation, we estimate that household incentives would need to approach \$1,000 annually. Currently, the operational expense (OpEx) of the logistics network exceeds the value of the carbon recovered, making the unit economics more unfavorable. This structural deficit makes it difficult to subsidize the network upfront with Venture Capital funding. The key takeaway is that there is simply insufficient market demand for the molecule itself to support an ``AirBnB for Carbon'' narrative.
+This creates a critical gap in the business model. To induce behavioral change and consistent participation, we estimate that household incentives would need to approach \$1,000 annually. 
+To reach this number at current market rates in this configuration, each service visit would need to yield 10 times the amount of \ce{CO2} to reach this number. 
+However, the operational expense (OpEx) of the logistics network exceeds the value of the carbon recovered, making the unit economics more unfavorable. This structural deficit makes it difficult to subsidize the network upfront with Venture Capital funding. The key takeaway is that there is simply insufficient market demand for the molecule itself to support an ``AirBnB for Carbon Capture'' narrative.
 
 \subsubsection{Total Climate Impact vs. Human Constraints}
 Finally, we must address the total climate impact. In its current ``manual swap'' configuration, the theoretical ceiling of this scheme is roughly 7MMT annually, a tiny fraction compared to the emissions of the U.S. passenger vehicle sector alone (1000MMT). 
@@ -761,73 +774,116 @@ It is crucial to note, however, that this ceiling is defined by human factors, n
 
 For this technology to bridge the gap between a theoretical curiosity and a scalable climate solution, we recommend three focus areas for future R\&D.
 
+\subsubsection{Supply-Side R\&D: In-Home Regeneration}
+Moving the regeneration process from a centralized plant to a distributed in-home process would solve the logistics bottleneck, and have the potential to increase revenues into a range that might drive homeowner participation. 
+
+Such a model poses significant engineering challenges, as the filter unit would become more complex, heavier, and require active heating elements. However, this challenge may mask an opportunity for synergy. Future research should investigate utilizing the resistive heat required for sorbent regeneration to supplement the home's HVAC heating load. If a device can capture and regenerate carbon automatically --timing its cycles to align with excess solar availability or low grid demand-- a single home could capture roughly 10x the volume of the current model without any additional labor from the homeowner.
+This increase in yield has the potential to flip the economics of the model from negative to positive.
+
 \subsubsection{Demand-Side R\&D: Creating Valuable Utilization}
-The economic failure of the distributed model is a function of the low market value of captured carbon. If the market for the output product expands, the entire logistics chain becomes viable. We see two distinct avenues for this work:
+The economic failure of the distributed model is a function of the low market value of captured carbon. If the market for the output product expands, the entire logistics chain becomes viable. We see a few distinct avenues for this work:
 
 \begin{itemize}
-    \item \textbf{Useful Sequestration (Green Concrete):} Research should prioritize the integration of residential carbon into ``green concrete'' and aggregates, or other products that permanently sequester carbon while producing a necessary market good. We argue that this dual-value is essential; the industry cannot rely on altruism or charity to pay for the burial of carbon that has no captured monetary value.
+    \item \textbf{Useful Sequestration (Green Concrete):} Research should prioritize the integration of residential carbon into ``green concrete'' and aggregates, or other products that permanently sequester carbon while producing a necessary market good. We argue that this dual-value is essential; the industry cannot rely on altruism or charity to pay for the burial of carbon that has no captured monetary value. 
     
-    \item \textbf{High-Value ``Bridge'' Fuels:} Converting captured \ce{CO2} into synthetic fuels \emph{e.g.} Methanol or E-Kerosene, could command prices exceeding \$1,000/tonne. We acknowledge the inherent contradiction here: the eventual combustion of these fuels releases the carbon back into the atmosphere, undermining the sequestration goal. This transforms DAC from a carbon removal strategy to an emissions reduction strategy by creating a net-zero-emissions synthetic fuel. These high-margin products could serve as a necessary beachhead, providing the revenue required to fund the network's early growth before pivoting to permanent sequestration methods.
+    \item \textbf{High-Value ``Bridge'' Fuels:} Converting captured \ce{CO2} into synthetic fuels \emph{e.g.} Methanol or E-Kerosene, could command prices exceeding \$1,000/tonne. We acknowledge the inherent contradiction here: the eventual combustion of these fuels releases the carbon back into the atmosphere, undermining the sequestration goal. This transforms DAC from a carbon removal strategy to an emissions reduction strategy by creating a net-zero-emissions synthetic fuel. These high-margin products could serve as a necessary beachhead, providing the revenue required to fund the network's early growth before pivoting to permanent sequestration methods. However, the issues of the operating costs of the \ce{CO2} transportation network, and upfront cost of the regeneration facility would remain. Furthermore, any \ce{CO2} conversion is also highly energy intensive and would require additional processing machinery. For these reasons, we do not see this to be a viable course of actions, at least until the costs of capture and regeneration come down significantly.
+
+    \item \textbf{"Pure" \ce{H2O} Co-Product :} Supplementing the value of captured and regenerated carbon dioxide would be the promise of clean industrial water that would be captured in the filters and condensed in the regeneration facility. This water could serve as a source of industrial cooling supply such as for a data center.
 \end{itemize}
-
-\subsubsection{Supply-Side R\&D: In-Home Regeneration}
-Moving the regeneration process from a centralized plant to a distributed in-home process would solve the logistics bottleneck. 
-
-Such a model poses significant engineering challenges, as the filter unit would become more complex, heavier, and require active heating elements. However, this challenge may mask an opportunity for synergy. Future research should investigate utilizing the resistive heat required for sorbent regeneration to supplement the home's HVAC heating load. If a device can capture and regenerate carbon automatically -- timing its cycles to align with excess solar availability or low grid demand -- a single home could capture roughly 10x the volume of the current model without any additional labor from the homeowner.
 
 \subsubsection{Business Model Pivot: Premium Health Product}
 Absent the R\&D advancements theorized above, the currently-modeled system could be productized as a premium consumer health appliance.
 
 By marketing the device as a best-in-class air purifier that removes VOCs, allergens, and \ce{CO2} for the health of the occupants, the revenue model shifts from commodity sales to consumer hardware. In this scenario, the homeowner funds the deployment of the hardware for personal wellness, allowing the carbon capture network to scale as a secondary, cumulative asset class. While this strategy inevitably reduces the Total Addressable Market (TAM) by pricing out lower-income households, it could serve as a beachhead to prove the technology and build the distributed infrastructure required for gigaton-scale capture.
 
+\section{Acknowledgements}
+
+The authors graciously thank the Climatebase Fellowship for their support in pursuing this work, and the broader Fellowship community for ample feedback and excitement. 
+
 \begin{thebibliography}{99}
-    \bibitem{ieefa2022} Robertson, B., and M. Mousavian,``Carbon Capture to Serve Enhanced Oil Recovery: Overpromise and Underperformance,'' \textit{Institute for Energy Economics and Financial Analysis (IEEFA)}, March 2022. Available: \url{https://ieefa.org/wp-content/uploads/2022/02/Carbon-Capture-to-Serve-Enhanced-Oil-Recovery-Overpromise-and-Underperformance_March-2022.pdf}
-    \bibitem{eip2024adm} Gibbons, Brendan, ``In Illinois, a massive taxpayer-funded carbon capture project fails to capture about 90 percent of plant\'s emissions'' \textit{Oil \& Gas Watch}, 2024. Available: \url{https://news.oilandgaswatch.org/post/in-illinois-a-massive-taxpayer-funded-carbon-capture-project-fails-to-capture-about-90-percent-of-plants-emissions}
-    \bibitem{seabound2025} Seabound, ``Seabound Launches World-First Onboard Marine Carbon Capture Project With Hartmann, InterMaritime, And Heidelberg Materials'' \textit{Carbon Capture Magazine}, July 2025. [Online]. Available: \url{https://carboncapturemagazine.com/articles/seabound-launches-world-first-onboard-marine-carbon-capture-project-with-hartmann-intermaritime-and-heidelberg-materials}
-    \bibitem{soletairwebsite} ``Regenerative Building Pilot at Europaplads'' \textit{Soletair company website}. [Online]. Available: \url{https://www.soletairpower.fi/soletair-power-bicc-onsite-unit-aarhus-denmark/}
-    \bibitem{carbonreformsite} ``The Carbon Reduction System (CRS)'' \textit{Carbon Reform website}. [Online]. Available: \url{https://www.carbonreform.com/carbon-reduction-system}
-    \bibitem{cleantechnica2025ovi} Evans, Larry, ``Atalanta Climate Ovi: Indoor Carbon Capture at the Intersection of Health \& Climate Change'', \textit{CleanTechnica} October 2025. [Online]. Available: \url{https://cleantechnica.com/2025/10/22/atalanta-climate-ovi-indoor-carbon-capture-at-the-intersection-of-health-climate-change/}
-    \bibitem{an2023} An, Keju, et al. “A Comprehensive Review on Regeneration Strategies for Direct Air Capture.” Journal of CO2 Utilization, vol. 76, 2023.
-    \bibitem{house2011} House KZ, et al. Economic and energetic analysis of capturing CO2 from ambient air. Proc Natl Acad Sci U S A. 2011.
-    \bibitem{li2024} Li, Sheng, and Zhong Zhang. “Prospects for Direct Air Capture.” The Innovation Energy, vol. 1, 2024.
-    \bibitem{hoeger2021} Hoeger, Christopher, et al. “Cryogenic Carbon Capture Technoeconomic Analysis.” SSRN Electronic Journal, 2021.
-    \bibitem{wang2012} Wang, Tao, et al. “Moisture-swing Sorption for Carbon Dioxide Capture From Ambient Air.” Physical Chemistry Chemical Physics, 2012.
-    \bibitem{iea} IEA, Direct Air Capture. \url{https://www.iea.org/energy-system/carbon-capture-utilisation-and-storage/direct-air-capture}
-    \bibitem{sabatino2022} Sabatino, Francesco, et al. “Modeling... Bipolar Membrane Electrodialysis.” Industrial \& Engineering Chemistry Research, 2022.
-    \bibitem{keith2018process} D.~W. Keith, G.~Holmes, D.~St.~Angelo, and K.~Heidel, ``A process for capturing \ce{CO2} from the atmosphere,'' \emph{Joule}, vol. 2, no. 8, pp. 1573--1594, 2018.
-    \bibitem{panda2023evaluation} Panda, D., Kulkarni, V. \& Singh, S. Evaluation of amine-based solid adsorbents for direct air capture: a critical review. {\em Reaction Chemistry \& Engineering}. \textbf{8}, 10-40 (2023)
-    \bibitem{sanz2016direct}Sanz-Pérez, E., Murdock, C., Didas, S. \& Jones, C. Direct capture of \ce{CO2} from ambient air. {\em Chemical Reviews}. \textbf{116}, 11840-11876 (2016)
-    \bibitem{shekhah2014made}Shekhah, O., Belmabkhout, Y., Chen, Z., Guillerm, V., Cairns, A., Adil, K. \& Eddaoudi, M. Made-to-order metal-organic frameworks for trace carbon dioxide removal and air capture. {\em Nature Communications}. \textbf{5}, 4228 (2014)
-    \bibitem{redfern2019mechanical}Redfern, L. \& Farha, O. Mechanical properties of metal–organic frameworks. {\em Chemical Science}. \textbf{10}, 10666-10679 (2019)
-    \bibitem{wang2025investigation}Wang, Y., Kim, J., Marreiros, J., Rangnekar, N., Yuan, Y., Johnson, J., McCool, B., Realff, M. \& Lively, R. Investigation of Moisture Swing Adsorbents for Direct Air Capture by Dynamic Breakthrough Studies. {\em ACS Sustainable Chemistry \& Engineering}. \textbf{13}, 6554-6564 (2025)
+    \bibitem{ieefa2022} 
+    Robertson, B. and Mousavian, M., ``Carbon Capture to Serve Enhanced Oil Recovery: Overpromise and Underperformance,'' \textit{Institute for Energy Economics and Financial Analysis (IEEFA)}, Mar. 2022. [Online]. Available: \url{https://ieefa.org/wp-content/uploads/2022/02/Carbon-Capture-to-Serve-Enhanced-Oil-Recovery-Overpromise-and-Underperformance_March-2022.pdf}
 
-    \bibitem{yuan2023indoor}Yuan, J., Song, X., Yang, X., Yang, C., Wang, Y., Deng, G., Wang, Z. \& Gao, J. Indoor carbon dioxide capture technologies: a review. {\em Environmental Chemistry Letters}. \textbf{21}, 2559-2581 (2023)
+    \bibitem{eip2024adm} 
+    Gibbons, B., ``In Illinois, a massive taxpayer-funded carbon capture project fails to capture about 90 percent of plant's emissions,'' \textit{Oil \& Gas Watch}, 2024. [Online]. Available: \url{https://news.oilandgaswatch.org/post/in-illinois-a-massive-taxpayer-funded-carbon-capture-project-fails-to-capture-about-90-percent-of-plants-emissions}
+
+    \bibitem{seabound2025} 
+    Seabound, ``Seabound Launches World-First Onboard Marine Carbon Capture Project With Hartmann, InterMaritime, And Heidelberg Materials,'' \textit{Carbon Capture Magazine}, July 2025. [Online]. Available: \url{https://carboncapturemagazine.com/articles/seabound-launches-world-first-onboard-marine-carbon-capture-project-with-hartmann-intermaritime-and-heidelberg-materials}
+
+    \bibitem{soletairwebsite} 
+    Soletair Power, ``Regenerative Building Pilot at Europaplads,'' \textit{Soletair Company Website}. [Online]. Available: \url{https://www.soletairpower.fi/soletair-power-bicc-onsite-unit-aarhus-denmark/}
+
+    \bibitem{carbonreformsite} 
+    Carbon Reform, ``The Carbon Reduction System (CRS),'' \textit{Carbon Reform Website}. [Online]. Available: \url{https://www.carbonreform.com/carbon-reduction-system}
+
+    \bibitem{cleantechnica2025ovi} 
+    Evans, L., ``Atalanta Climate Ovi: Indoor Carbon Capture at the Intersection of Health \& Climate Change,'' \textit{CleanTechnica}, Oct. 2025. [Online]. Available: \url{https://cleantechnica.com/2025/10/22/atalanta-climate-ovi-indoor-carbon-capture-at-the-intersection-of-health-climate-change/}
+
+    \bibitem{yuan2023indoor} 
+    Yuan, J., Song, X., Yang, X., Yang, C., Wang, Y., Deng, G., Wang, Z., and Gao, J., ``Indoor carbon dioxide capture technologies: a review,'' \textit{Environmental Chemistry Letters}, vol. 21, pp. 2559--2581, 2023.
+
+    \bibitem{panda2023evaluation} 
+    Panda, D., Kulkarni, V., and Singh, S., ``Evaluation of amine-based solid adsorbents for direct air capture: a critical review,'' \textit{Reaction Chemistry \& Engineering}, vol. 8, pp. 10--40, 2023.
+
+    \bibitem{sanz2016direct} 
+    Sanz-Pérez, E., Murdock, C., Didas, S., and Jones, C., ``Direct capture of \ce{CO2} from ambient air,'' \textit{Chemical Reviews}, vol. 116, pp. 11840--11876, 2016.
+
+    \bibitem{redfern2019mechanical} 
+    Redfern, L. and Farha, O., ``Mechanical properties of metal–organic frameworks,'' \textit{Chemical Science}, vol. 10, pp. 10666--10679, 2019.
+
+    \bibitem{wang2025investigation} 
+    Wang, Y., Kim, J., Marreiros, J., Rangnekar, N., Yuan, Y., Johnson, J., McCool, B., Realff, M., and Lively, R., ``Investigation of Moisture Swing Adsorbents for Direct Air Capture by Dynamic Breakthrough Studies,'' \textit{ACS Sustainable Chemistry \& Engineering}, vol. 13, pp. 6554--6564, 2025.
+
+    \bibitem{lammert2010ups} 
+    Lammert, M., ``United Parcel Service Evaluates Hybrid Electric Delivery Vans,'' National Renewable Energy Laboratory (NREL), Golden, CO, Tech. Rep. NREL/TP-5400-47327, Apr. 2010. [Online]. Available: \url{https://www.nrel.gov/docs/fy10osti/47327.pdf}
+
+    \bibitem{wef2020lastmile} 
+    World Economic Forum, ``The Future of the Last-Mile Ecosystem,'' World Economic Forum Reports, p. 11, Jan. 2020. [Online]. Available: \url{https://www3.weforum.org/docs/WEF_Future_of_the_last_mile_ecosystem.pdf}
+
+    \bibitem{waters1994niosh} 
+    Waters, T. R., Putz-Anderson, V., and Garg, A., ``Applications Manual for the Revised NIOSH Lifting Equation,'' National Institute for Occupational Safety and Health (NIOSH), Cincinnati, OH, DHHS (NIOSH) Pub. No. 94-110, 1994.
+
+    \bibitem{fccc2024mt45} 
+    Freightliner Custom Chassis Corp, ``MT45 Walk-In Van Chassis: Technical Specifications,'' Daimler Truck North America, Portland, OR, Prod. Sheet, 2024. [Online]. Available: \url{https://www.freightliner.com/chassis/mt-chassis/}
+
+    \bibitem{rivian2025fleet} 
+    Rivian Automotive, ``Rivian Commercial Van: Fleet Specifications (Model Year 2025),'' Irvine, CA, Tech. Spec. Sheet, Feb. 2025. [Online]. Available: \url{https://stories.rivian.com/rivian-commercial-van-fleet}
+
+    \bibitem{eia2020recs} 
+    U.S. Energy Information Administration, ``Residential Energy Consumption Survey (RECS), Table HC10.9,'' U.S. Department of Energy, 2020. [Online]. Available: \url{https://www.eia.gov/consumption/residential/data/2020/hc/pdf/HC\%2010.9.pdf}
+
+    \bibitem{epa2024factors} 
+    U.S. Environmental Protection Agency, ``Exposure Factors Handbook: Chapter 19 (Building Characteristics),'' 2024. [Online]. Available: \url{https://www.epa.gov/system/files/documents/2025-01/efh-chapter19_508.pdf}
+
+    \bibitem{satish2012indoor} 
+    Satish, U. \textit{et al.}, ``Is \ce{CO2} an Indoor Pollutant? Direct Effects of Low-to-Moderate \ce{CO2} Concentrations on Human Decision-Making Performance,'' \textit{Environmental Health Perspectives}, vol. 120, no. 12, pp. 1671--1677, 2012. [Online]. Available: \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC3548304/}
+
+    \bibitem{toolbox2024density} 
+    The Engineering ToolBox, ``Carbon Dioxide - Density and Specific Weight,'' 2024. [Online]. Available: \url{https://www.engineeringtoolbox.com/carbon-dioxide-density-specific-weight-temperature-pressure-d_2018.html}
+
+    \bibitem{fred2024households} 
+    U.S. Census Bureau and Federal Reserve Bank of St. Louis, ``Total Households [TTLHH],'' 2024. [Online]. Available: \url{https://fred.stlouisfed.org/series/TTLHH}
+
+    \bibitem{eia2020hvac} 
+    U.S. Energy Information Administration, ``Residential Energy Consumption Survey (RECS), Table HC7.1 (Air Conditioning) and HC6.1 (Space Heating),'' U.S. Department of Energy, 2020. [Online]. Available: \url{https://www.eia.gov/consumption/residential/data/2020/hc/}
+
+    \bibitem{AN2023102587} 
+    An, K. \textit{et al.}, ``A Comprehensive Review on Regeneration Strategies for Direct Air Capture,'' \textit{Journal of \ce{CO2} Utilization}, vol. 76, p. 102587, Sept. 2023. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/S2212982023001981?via%3Dihub}
+
+    \bibitem{Leonzio_Fennell_Shah_2022} 
+    Leonzio, G., Fennell, P. S., and Shah, N., ``Modelling and Analysis of Direct Air Capture Systems in Different Locations,'' \textit{Chemical Engineering Transactions}, vol. 96, pp. 1–6, 2022. [Online]. Available: \url{https://www.cetjournal.it/cet/22/96/001.pdf}
+
+    \bibitem{gridrates_2025} 
+    ElectricChoice.com, ``Electricity Rates by State – December 2025,'' \textit{Electric Choice}, Dec. 2025. [Online]. Available: \url{https://www.electricchoice.com/electricity-prices-by-state}
+
+    \bibitem{olivon25} 
+    Olivon Advisors, ``The U.S. Food Grade \ce{CO2} Industry: An Essential Component of Food and Beverage Processing,'' \textit{Olivon Advisors}, June 2025. [Online]. Available: \url{https://www.olivonadvisors.com/the-u-s-food-grade-co2-industry-an-essential-component-of-food-and-beverage-processing/}
+
+    \bibitem{sudarshan25} 
+    Sudarshan Group, ``How Much Does Calcium Carbonate Cost?'' \textit{Sudarshan Group Industry Insights}, Sept. 2025. [Online]. Available: \url{https://sudarshangroup.com/the-true-cost-of-industrial-materials-factors-trends-and-insights/}
+
     
-   
-    % Distribution
-    \bibitem{noaa2024trends} NOAA Global Monitoring Laboratory, ``Trends in Atmospheric Carbon Dioxide,'' 2024. [Online]. Available: \url{https://gml.noaa.gov/ccgg/trends/weekly.html}.
-    \bibitem{fred2024households} U.S. Census Bureau and Federal Reserve Bank of St. Louis, ``Total Households [TTLHH],'' 2024. [Online]. Available: \url{https://fred.stlouisfed.org/series/TTLHH}.
-    \bibitem{eia2020recs} U.S. Energy Information Administration, ``Residential Energy Consumption Survey (RECS), Table HC10.9,'' U.S. Department of Energy, 2020. [Online]. Available: \url{https://www.eia.gov/consumption/residential/data/2020/hc/pdf/HC\%2010.9.pdf}.
-    \bibitem{satish2012indoor} U. Satish et al., ``Is \ce{CO2} an Indoor Pollutant? Direct Effects of Low-to-Moderate \ce{CO2} Concentrations on Human Decision-Making Performance,'' \textit{Environmental Health Perspectives}, vol. 120, no. 12, pp. 1671--1677, 2012. Available: \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC3548304/}.
-    \bibitem{epa2024factors} U.S. Environmental Protection Agency, ``Exposure Factors Handbook: Chapter 19 (Building Characteristics),'' 2024. [Online]. Available: \url{https://www.epa.gov/system/files/documents/2025-01/efh-chapter19_508.pdf}.
-    \bibitem{toolbox2024density} The Engineering ToolBox, ``Carbon Dioxide - Density and Specific Weight,'' 2024. [Online]. Available: \url{https://www.engineeringtoolbox.com/carbon-dioxide-density-specific-weight-temperature-pressure-d_2018.html}.
-    \bibitem{eia2020hvac} U.S. Energy Information Administration, ``Residential Energy Consumption Survey (RECS), Table HC7.1 (Air Conditioning) and HC6.1 (Space Heating),'' U.S. Department of Energy, 2020. [Online]. Available: \url{https://www.eia.gov/consumption/residential/data/2020/hc/}.
-
-    \bibitem{AN2023102587} An, Keju, et al. “A Comprehensive Review on Regeneration Strategies for Direct Air Capture.” Journal of CO2 Utilization, vol. 76, Sept. 2023, p. 102587. [Online]
-    Available: \url{https://www.sciencedirect.com/science/article/pii/S2212982023001981?via%3Dihub}
-    \bibitem{Leonzio_Fennell_Shah_2022} Leonzio Grazia, Fennell Paul S., \& Shah Nilay. (2022). Modelling and Analysis of Direct Air Capture Systems in Different Locations. Chemical Engineering Transactions, 96, 1–6. [Online]
-    Available: \url{https://www.cetjournal.it/cet/22/96/001.pdf}
-    \bibitem{gridrates_2025} ElectricChoice.com. “Electricity Rates by State – December 2025.” Electric Choice, 2 Dec. 2025, [Online] Available: \url{www.electricchoice.com/electricity-prices-by-state.}
-    \bibitem{olivon25} Admin, Olivon. “The U.S. Food Grade CO2 Industry: An Essential Component of Food and Beverage Processing.” Olivon Advisors, 6 June 2025[Online]
-    Available: \url{https://www.olivonadvisors.com/the-u-s-food-grade-co2-industry-an-essential-component-of-food-and-beverage-processing/}
-   \bibitem{sudarshan25} Mining, and Mining. “How Much Does Calcium Carbonate Cost - Sudarshan Group.” Sudarshan Group -, 27 Sept. 2025, sudarshangroup.com/the-true-cost-of-industrial-materials-factors-trends-and-insights. [Online]
-    Available: \url{https://sudarshangroup.com/the-true-cost-of-industrial-materials-factors-trends-and-insights/}
-    \bibitem{lammert2010ups} M. Lammert, ``United Parcel Service Evaluates Hybrid Electric Delivery Vans,'' National Renewable Energy Laboratory (NREL), Golden, CO, Tech. Rep. NREL/TP-5400-47327, Apr. 2010. [Online]. Available: \url{https://www.nrel.gov/docs/fy10osti/47327.pdf}
-    \bibitem{wef2020lastmile} World Economic Forum, ``The Future of the Last-Mile Ecosystem,'' World Economic Forum Reports, p. 11, Jan. 2020. [Online]. Available: \url{https://www3.weforum.org/docs/WEF_Future_of_the_last_mile_ecosystem.pdf}
-    \bibitem{waters1994niosh} T. R. Waters, V. Putz-Anderson, and A. Garg, ``Applications Manual for the Revised NIOSH Lifting Equation,'' National Institute for Occupational Safety and Health (NIOSH), Cincinnati, OH, DHHS (NIOSH) Pub. No. 94-110, 1994.
-    \bibitem{fasihi2019techno} M.~Fasihi, O.~Efimova, and C.~Breyer, ``Techno-economic assessment of \ce{CO2} direct air capture plants,'' \emph{Journal of Cleaner Production}, vol. 224, pp. 957--980, 2019.
-    \bibitem{fccc2024mt45} Freightliner Custom Chassis Corp, ``MT45 Walk-In Van Chassis: Technical Specifications,'' Daimler Truck North America, Portland, OR, Prod. Sheet, 2024. [Online]. Available: \url{https://www.freightliner.com/chassis/mt-chassis/}
-    \bibitem{rivian2025fleet} Rivian Automotive, ``Rivian Commercial Van: Fleet Specifications (Model Year 2025),'' Irvine, CA, Tech. Spec. Sheet, Feb. 2025. [Online]. Available: \url{https://stories.rivian.com/rivian-commercial-van-fleet}
+    
 
 \end{thebibliography}
 \end{document}
